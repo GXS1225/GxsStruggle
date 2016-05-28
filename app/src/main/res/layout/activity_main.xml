@@ -1,12 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/test"
-        android:text="Gxs,我要奋斗了！"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#EBEBEB"
+        android:layout_height="1dp"/>
+
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp">
+
+        <RadioButton
+            android:id="@+id/Board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_board"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="公告板"
+            android:textSize="10dp"
+            android:textColor="@color/tab_selector_tv_color"/>
+
+        <RadioButton
+            android:id="@+id/Community"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center_horizontal|bottom"
+            android:drawableTop="@drawable/tab_community"
+            android:paddingTop="2dp"
+            android:text="社区"
+            android:textSize="10dp"
+            android:textColor="@color/tab_selector_tv_color"/>
+
+        <RadioButton
+            android:id="@+id/Chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_message"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="消息"
+            android:textSize="10dp"
+            android:textColor="@color/tab_selector_tv_color"/>
+
+        <RadioButton
+            android:id="@+id/Me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_wo"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="我的"
+            android:textSize="10dp"
+            android:textColor="@color/tab_selector_tv_color"/>
+
+    </RadioGroup>
 
 </LinearLayout>
