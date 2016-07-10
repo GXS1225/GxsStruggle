@@ -1,4 +1,4 @@
-package com.bzu.gxs.fragment;
+package com.bzu.gxs.adapter.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,14 +11,14 @@ import com.bzu.gxs.R;
 
 /**
  * Created by Gxs on 2016/5/28.
- * 我的界面
+ * 社区
  */
-public class FragmentMe extends Fragment{
+public class FragmentCommunity extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_me,null);
+        return inflater.inflate(R.layout.fragment_community,null);
     }
 
     @Override

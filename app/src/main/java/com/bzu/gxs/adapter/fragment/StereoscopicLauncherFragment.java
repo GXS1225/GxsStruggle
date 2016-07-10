@@ -1,5 +1,6 @@
-package com.bzu.gxs.fragment;
+package com.bzu.gxs.adapter.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import com.bzu.gxs.R;
+import com.bzu.gxs.activity.MainActivity;
+
 /**
  * 最后一个
  * @author apple
@@ -21,7 +24,6 @@ import com.bzu.gxs.R;
 public class StereoscopicLauncherFragment extends LauncherBaseFragment implements OnClickListener {
 	private static final float ZOOM_MAX = 1.3f;
 	private static final  float ZOOM_MIN = 1.0f;
-	
 	private ImageView imgView_immediate_experience;
     
 	@Override
@@ -74,10 +76,10 @@ public class StereoscopicLauncherFragment extends LauncherBaseFragment implement
 
 	@Override
 	public void onClick(View v) {
-//		Intent intent = new Intent();
-//		intent.setClass(getActivity(),MainActivity.class);
-//		startActivity(intent);
-//		getActivity().finish();
+		Intent intent = new Intent();
+		intent.setClass(getActivity(),MainActivity.class);
+		startActivity(intent);
+		getActivity().finish();
 	}
 
 	@Override

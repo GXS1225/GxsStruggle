@@ -1,4 +1,4 @@
-package com.bzu.gxs.fragment;
+package com.bzu.gxs.adapter.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,19 +11,18 @@ import com.bzu.gxs.R;
 
 /**
  * Created by Gxs on 2016/5/28.
- * 消息（包括通知和聊天）
+ * 我的界面
  */
-public class FragmentChat extends Fragment{
+public class FragmentMe extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_chat,null);
+        return inflater.inflate(R.layout.fragment_me,null);
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
 }

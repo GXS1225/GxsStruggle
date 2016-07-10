@@ -1,4 +1,4 @@
-package com.bzu.gxs.fragment;
+package com.bzu.gxs.adapter.fragment;
 
 import android.support.v4.app.Fragment;
 

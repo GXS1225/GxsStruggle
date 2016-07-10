@@ -3,7 +3,7 @@ package com.bzu.gxs.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import com.bzu.gxs.fragment.LauncherBaseFragment;
+import com.bzu.gxs.adapter.fragment.LauncherBaseFragment;
 
 import java.util.List;
 

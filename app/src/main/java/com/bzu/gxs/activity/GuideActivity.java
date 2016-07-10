@@ -13,10 +13,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.bzu.gxs.adapter.BaseFragmentAdapter;
-import com.bzu.gxs.fragment.LauncherBaseFragment;
-import com.bzu.gxs.fragment.PrivateMessageLauncherFragment;
-import com.bzu.gxs.fragment.RewardLauncherFragment;
-import com.bzu.gxs.fragment.StereoscopicLauncherFragment;
+import com.bzu.gxs.adapter.fragment.FragmengtGuide4;
+import com.bzu.gxs.adapter.fragment.FragmengtGuide5;
+import com.bzu.gxs.adapter.fragment.LauncherBaseFragment;
+import com.bzu.gxs.adapter.fragment.PrivateMessageLauncherFragment;
+import com.bzu.gxs.adapter.fragment.RewardLauncherFragment;
+import com.bzu.gxs.adapter.fragment.StereoscopicLauncherFragment;
 import com.bzu.gxs.view.GuideViewPager;
 import com.bzu.gxs.R;
 
@@ -40,7 +42,7 @@ public class GuideActivity extends FragmentActivity {
 
         //初始化点点点控件
         ViewGroup group = (ViewGroup)findViewById(R.id.viewGroup);
-        tips = new ImageView[3];
+        tips = new ImageView[5];
         for (int i = 0; i < tips.length; i++) {
             ImageView imageView = new ImageView(this);
             imageView.setLayoutParams(new LayoutParams(10, 10));
@@ -67,13 +69,17 @@ public class GuideActivity extends FragmentActivity {
         RewardLauncherFragment rewardFragment = new RewardLauncherFragment();
         PrivateMessageLauncherFragment privateFragment = new PrivateMessageLauncherFragment();
         StereoscopicLauncherFragment stereoscopicFragment = new StereoscopicLauncherFragment();
+        FragmengtGuide4 fragmengtGuide4 = new FragmengtGuide4();
+        FragmengtGuide5 fragmengtGuide5 = new FragmengtGuide5();
+        list.add(fragmengtGuide5);
+        list.add(fragmengtGuide4);
         list.add(rewardFragment);
         list.add(privateFragment);
         list.add(stereoscopicFragment);
 
         adapter = new BaseFragmentAdapter(getSupportFragmentManager(),list);
         vPager.setAdapter(adapter);
-        vPager.setOffscreenPageLimit(2);
+        vPager.setOffscreenPageLimit(4);
         vPager.setCurrentItem(0);
         vPager.setOnPageChangeListener(changeListener);
     }
